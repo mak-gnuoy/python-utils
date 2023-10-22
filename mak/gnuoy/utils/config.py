@@ -13,7 +13,6 @@ class Config:
             self.config.read(self.filepath)
         except FileNotFoundError as e:
             self.last_modified = 0
-            pass
 
     def _reload(self):
         if self.last_modified < os.path.getmtime(self.filepath):
